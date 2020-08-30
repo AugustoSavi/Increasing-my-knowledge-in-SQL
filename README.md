@@ -28,4 +28,8 @@ SELECT cad_fornecedor.id_fornecedor, cad_fornecedor.site, cad_municipio.id_munic
 --------------------------------LENGTH()--------------------------------
 ````
 select descricao, LENGTH(cad_cliente.cpf_cnpj) from cad_cliente
+
+update cad_cliente set cad_cliente.tipo = 'J' where LENGTH(cad_cliente.cpf_cnpj) > 14;
+
+
 ````
