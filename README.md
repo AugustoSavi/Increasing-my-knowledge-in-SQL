@@ -25,3 +25,7 @@ cad_cliente, cad_municipio where cad_cliente.inf_comerciais = cad_municipio.desc
 ````
 SELECT cad_fornecedor.id_fornecedor, cad_fornecedor.site, cad_municipio.id_municipio, cad_municipio.descricao FROM cad_fornecedor INNER JOIN cad_municipio ON cad_fornecedor.site = cad_municipio.descricao
 ````
+--------------------------------LENGTH()--------------------------------
+````
+select descricao, LENGTH(cad_cliente.cpf_cnpj) from cad_cliente
+````
