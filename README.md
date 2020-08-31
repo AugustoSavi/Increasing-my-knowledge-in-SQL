@@ -15,6 +15,25 @@ UPDATE cad_cliente, cad_municipio SET cad_cliente.id_municipio = cad_municipio.i
 UPDATE cad_cliente, cad_municipio SET cad_cliente.id_municipio = cad_municipio.id_municipio WHERE cad_cliente.complemento = cad_municipio.descricao
 
 UPDATE cad_fornecedor , cad_municipio SET cad_fornecedor.id_municipio = cad_municipio.id_municipio WHERE cad_fornecedor.site = cad_municipio.descricao
+
+UPDATE cad_ctr SET id_natureza = '2';
+
+UPDATE cad_ctr SET origem = 'CTR';
+
+UPDATE cad_ctr SET id_representante = '1';
+
+UPDATE cad_ctr SET id_natureza = '2';
+
+UPDATE cad_ctr SET parcela = '1';
+
+UPDATE cad_ctr SET forma_pagto_comissao = 'F';
+
+UPDATE cad_cliente, cad_ctr SET cad_ctr.id_cliente = cad_cliente.id_cliente WHERE cad_cliente.fantasia = cad_ctr.descricao_cliente;
+
+UPDATE cad_ctr SET id_empresa = '1';
+
+update cad_cliente set cad_cliente.descricao = cad_cliente.fantasia where cad_cliente.descricao = '';
+
 ```
 -------------------------------- SELECTS --------------------------------
 ````
