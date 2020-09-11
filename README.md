@@ -57,3 +57,21 @@ update cad_cliente set cad_cliente.tipo = 'J' where LENGTH(cad_cliente.cpf_cnpj)
 
 
 ````
+-------------------------------- CREATE --------------------------------
+
+````
+CREATE TABLE IF NOT EXISTS auxiliar_complemento (
+    id int,
+    descricao varchar(255),
+    cpf_cnpj varchar(255),
+    complemento text
+);
+
+CREATE TABLE IF NOT EXISTS auxiliar_cep (
+    id int,
+    descricao varchar(255),
+    cpf_cnpj varchar(255),
+    cep varchar(255)
+);
+
+````
