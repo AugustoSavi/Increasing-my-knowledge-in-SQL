@@ -75,3 +75,9 @@ CREATE TABLE IF NOT EXISTS auxiliar_cep (
 );
 
 ````
+-------------------------------- REPLACE()--------------------------------
+
+````
+UPDATE auxilair_nascimento SET nascimento = REPLACE (nascimento, ' 00:00:00' , '')
+
+````
