@@ -39,6 +39,11 @@ update cad_cliente set cad_cliente.descricao = cad_cliente.fantasia where cad_cl
 ````
 select cad_cliente.descricao,  cad_cliente.inf_gerais , cad_cliente.inf_comerciais , cad_municipio.id_municipio , cad_municipio.descricao from
 cad_cliente, cad_municipio where cad_cliente.inf_comerciais = cad_municipio.descricao
+
+
+#Verifica os registros Duplicados
+SELECT cad_cliente.descricao,cad_cliente.cpf_cnpj, Count(*) FROM cad_cliente GROUP BY descricao HAVING Count(*) > 1
+
 ````
 -------------------------------- INNER JOIN--------------------------------
 ````
