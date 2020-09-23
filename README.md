@@ -81,3 +81,11 @@ CREATE TABLE IF NOT EXISTS auxiliar_cep (
 UPDATE auxilair_nascimento SET nascimento = REPLACE (nascimento, ' 00:00:00' , '')
 
 ````
+
+-------------------------------- LIMIT --------------------------------
+
+```
+#Este comando limita a quantidade de dados que vai ser tratado pela query em execução (Lembrente mental: Sempre utilizar isso em updates)
+
+UPDATE cad_cliente SET cad_cliente.nome_mae = '' LIMIT 1;
+```
