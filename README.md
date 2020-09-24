@@ -89,3 +89,10 @@ UPDATE auxilair_nascimento SET nascimento = REPLACE (nascimento, ' 00:00:00' , '
 
 UPDATE cad_cliente SET cad_cliente.nome_mae = '' LIMIT 1;
 ```
+
+-------------------------------- GROUP BY --------------------------------
+
+```
+SELECT  COUNT(*) AS 'QUANTIDADE DE PRODUTOS COM ESSE NCM' , cod_clafiscal AS 'NCM' FROM cad_produto GROUP BY cod_clafiscal;
+
+```
